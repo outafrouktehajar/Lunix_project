@@ -43,4 +43,32 @@ for ((i=1;i<=$#;i++)) do
           sqrt($1)
     fi
 }
+
+function log()
+{
+     
+    log()=$($1)
+    echo " log() est = $log"
+     
+    return 1;
+}
+ 
+function tan()
+{
+     
+    tan=$($1)
+    echo "tan() est = $tan"
+     
+    return 1;
+}
+ 
+ function exp()
+{
+     
+    exp()=$($1)
+    echo " exp() est = $exp"
+     
+    return 1;
+}
+
 done
