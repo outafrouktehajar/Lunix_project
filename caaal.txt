@@ -1,61 +1,109 @@
 #!/bin/bash
- 
- 
+Â 
+Â 
 function addition()
 {
-     
-    addition=$(($1+$2))
-    echo "addition est= $addition"
-     
-    return 1;
+Â Â Â Â Â 
+Â Â Â Â addition=$(($1+$2))
+Â Â Â Â echo "addition est= $addition"
+Â Â Â Â Â 
+Â Â Â Â return 1;
 }
- 
+Â 
 function soustraction()
 {
-     
-    soustraction=$(($1-$2))
-    echo "soustraction= $soustraction"
-     
-    return 1;
+Â Â Â Â Â 
+Â Â Â Â soustraction=$(($1-$2))
+Â Â Â Â echo "soustraction= $soustraction"
+Â Â Â Â Â 
+Â Â Â Â return 1;
 }
 function multiplication()
 {
-     
-     
-    multiplication=$(($1*$2))
-    echo "multiplication= $multiplication"
-     
-    return 1;
+Â Â Â Â Â 
+Â Â Â Â Â 
+Â Â Â Â multiplication=$(($1*$2))
+Â Â Â Â echo "multiplication= $multiplication"
+Â Â Â Â Â 
+Â Â Â Â return 1;
 }
 
 function division()
 {
-     
-     
-    division=$(($1/$2))
-    echo "div= $division"
-     
-    return 1;
+Â Â Â Â Â 
+Â Â Â Â Â 
+Â Â Â Â division=$(($1/$2))
+Â Â Â Â echo "div= $division"
+Â Â Â Â Â 
+Â Â Â Â return 1;
 }
- 
+Â 
 for ((i=1;i<=$#;i++)) do
 {
-     
-     
-    if   test ${!i} = "+"
-    then
-            addition $1 $3
-    elif  test ${!i} = "-"
-    then
-            soustraction $1 $3
-    elif  test ${!i} = "X"
-    then
-            multiplication $1 $3
- 
-    elif test ${!i} = "/"
-    then
-            division $1 $3
-     
-    fi
+Â Â Â Â Â 
+Â Â Â Â Â 
+Â Â Â Â if   test ${!i} = "+"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â Â Â addition $1 $3
+Â Â Â Â elif  test ${!i} = "-"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â Â Â soustraction $1 $3
+Â Â Â Â elif  test ${!i} = "X"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â Â Â multiplication $1 $3
+Â 
+Â Â Â Â elif test ${!i} = "/"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â Â Â division $1 $3
+Â Â Â Â Â 
+Â Â Â Â fi
+}
+done
+
+
+#!/bin/bash
+Â 
+Â 
+function cos()
+{
+Â Â Â Â Â 
+Â Â Â Â cos()=$($1)
+Â Â Â Â echo " cos() est = $cos"
+Â Â Â Â Â 
+Â Â Â Â return 1;
+}
+Â 
+function sin()
+{
+Â Â Â Â Â 
+Â Â Â Â soustraction=$($1)
+Â Â Â Â echo "sin()= $sin"
+Â Â Â Â Â 
+Â Â Â Â return 1;
+}
+function sqrt()
+{
+Â Â Â Â Â 
+Â Â Â Â Â 
+Â Â Â Â sqrt=$($1)
+Â Â Â Â echo "square est = $sqrt"
+Â Â Â Â Â 
+Â Â Â Â return 1;
+}
+Â 
+for ((i=1;i<=$#;i++)) do
+{
+Â Â Â Â Â 
+Â Â Â Â Â 
+Â Â Â Â if   test ${!i} = "cos()"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â Â Â cos($1) 
+Â Â Â Â elif  test ${!i} = "sin()"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â Â Â sin($1)
+Â Â Â Â elif  test ${!i} = "sqrt"
+Â Â Â Â then
+Â Â Â Â Â Â Â Â Â Â sqrt($1)
+Â Â Â Â fi
 }
 done
