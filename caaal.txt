@@ -76,7 +76,7 @@ function cos()
 function sin()
 {
      
-    soustraction=$($1)
+   sin=$($1)
     echo "sin()= $sin"
      
     return 1;
@@ -107,3 +107,31 @@ for ((i=1;i<=$#;i++)) do
     fi
 }
 done
+
+function log()
+{
+     
+    log()=$($1)
+    echo " log() est = $log"
+     
+    return 1;
+}
+ 
+function tan()
+{
+     
+    tan=$($1)
+    echo "tan() est = $tan"
+     
+    return 1;
+}
+ 
+ function exp()
+{
+     
+    exp()=$($1)
+    echo " exp() est = $exp"
+     
+    return 1;
+}
+done 
